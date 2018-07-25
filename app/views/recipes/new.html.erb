@@ -3,22 +3,13 @@
   <%= f.label :title %>
   <%= f.text_field :title %><br>
 
-<!--  <%= f.fields_for :ingredients do |ingredient| %>
+  <%= f.fields_for :ingredients do |ingredient| %>
     <%= ingredient.label :name %>
     <%= ingredient.text_field :name %><br>
 
     <%= ingredient.label :quantity %>
     <%= ingredient.text_field :quantity %><br>
-  <% end %> -->
-  <ul>
-    <%= f.fields_for :ingredients do |ingredient| %>
-    <li>
-      name: <%= ingredient.text_field :name %>
-      qty: <%= ingredient.text_field :quantity %>
-    </li>
-    <% end %>
-    <%= link_to 'add ingredient', @recipe %>
-  </ul>
+  <% end %> 
 
   <%= f.submit %>
 <% end %>
